@@ -1,0 +1,75 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Innovative Technologies",
+    description:
+      "Harness the power of cutting-edge technologies like AI, IoT, and blockchain to drive your innovations.",
+    icon: "bx:bxs-rocket",
+  },
+  {
+    title: "Collaboration Hub",
+    description:
+      "Connect with like-minded innovators and collaborate on groundbreaking projects.",
+    icon: "bx:bxs-users",
+  },
+  {
+    title: "Inspiring Ideas",
+    description:
+      "Discover and share inspiring ideas that spark creativity and drive innovation forward.",
+    icon: "bx:bxs-lightbulb",
+  },
+  {
+    title: "Prototype & Iterate",
+    description:
+      "Turn your innovative concepts into reality by rapid prototyping and iterative development.",
+    icon: "bx:bxs-cube-alt",
+  },
+  {
+    title: "Resource Library",
+    description:
+      "Access a vast library of resources, articles, and tools to fuel your innovative journey.",
+    icon: "bx:bxs-book-open",
+  },
+  {
+    title: "Global Community",
+    description:
+      "Join a global community of innovators and change-makers committed to pushing boundaries.",
+    icon: "bx:bxs-globe",
+  },
+];
+
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Empowering Innovation at The Open University of Sri Lanka
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    The Young Innovators Club at The Open University of Sri Lanka is a vibrant community dedicated to fostering innovation and creativity among our members. Our club brings together students and enthusiasts from diverse backgrounds who share a passion for exploring new ideas and turning them into reality.
+  </p>
+  <p class="text-lg mt-4 text-slate-600">
+    We provide a platform for collaboration, learning, and hands-on experience with cutting-edge technologies. Our goal is to inspire and empower the next generation of innovators, helping them transform their innovative concepts into tangible projects.
+  </p>
+  <p class="text-lg mt-4 text-slate-600">
+    Whether you're interested in technology, entrepreneurship, or simply want to be part of a dynamic community that encourages innovation, the Young Innovators Club welcomes you to join us on this exciting journey of creativity and discovery.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
