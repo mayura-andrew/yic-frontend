@@ -1,0 +1,55 @@
+---
+import Footer from "../components/footer.astro";
+import Navbar from "../components/navbar/navbar.astro";
+import { SEO } from "astro-seo";
+
+export interface Props {
+	title: string;
+}
+
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+// const resolvedImageWithDomain = new URL(
+//   "/opengraph.jpg",
+//   Astro.site
+// ).toString();
+
+const { title } = Astro.props;
+
+const makeTitle = title ? + " | " + "YIC OUSL"  : "Think, Learn, Apply, Made";
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<!-- <SEO
+		title={makeTitle}
+		description="Astroship is a starter website template for Astro built with TailwindCSS."
+		canonical={canonicalURL}
+		twitter={{
+		  creator: "@mayura-andrew",
+		  site: "@mayuraalahakoon",
+		  card: "summary_large_image",
+		}}
+		openGraph={{
+		  basic: {
+			url: canonicalURL,
+			type: "website",
+			title: `YIC OUSL`,
+			image: resolvedImageWithDomain,
+		  },
+		  image: {
+			alt: "YIC OUSL",
+		  },
+		}}
+	  /> -->
+	  <title>"YIC"</title>
+	</head>
+	<body>
+		<Navbar />
+        <slot />
+		<Footer />
+	</body>
+</html>
