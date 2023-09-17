@@ -1,7 +1,8 @@
 ---
 import Footer from "../components/footer.astro";
-import Navbar from "../components/navbar/navbar.astro";
 import { SEO } from "astro-seo";
+import { Navbar } from "../components/navbar/navbar.jsx";
+
 
 export interface Props {
 	title: string;
@@ -16,6 +17,9 @@ export interface Props {
 const { title } = Astro.props;
 
 const makeTitle = title ? + " | " + "YIC OUSL"  : "Think, Learn, Apply, Made";
+
+
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -48,8 +52,47 @@ const makeTitle = title ? + " | " + "YIC OUSL"  : "Think, Learn, Apply, Made";
 	  <title>"YIC"</title>
 	</head>
 	<body>
-		<Navbar />
+		<Navbar client:load />
         <slot />
 		<Footer />
 	</body>
 </html>
+
+<style>
+header {
+	align-items: baseline;
+	background: var(--color-gray-100);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem;
+	align-items: right;
+}
+	
+a[rel='home'] {
+	color: inherit;
+	font-family: 'DynaPuff', cursive;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+	
+nav {
+	display: flex;
+	gap: 1rem;
+}
+	
+nav a {
+	color: inherit;
+	font-size: 1.25rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+@media (min-width: 400px) {
+	header {
+		flex-direction: row;
+	}
+}
+	
+</style>
