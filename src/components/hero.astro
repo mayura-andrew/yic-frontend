@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import heroImage from "../Images/hero3.png";
+import heroImage from "../Images/hero4.png";
 
 import Link from "./ui/link.astro";
 import { Icon } from "astro-icon";
@@ -10,10 +10,10 @@ import { Icon } from "astro-icon";
         <Image 
           src={heroImage} 
           alt="Hero Image"
-          class="w-full md:w-96"
+          class="w-full md:w-100 mx-auto md:mx-0"
           loading="eager"
           format="png"
-          sizes="(max-width: 800px) 100vw, 620px"
+          sizes="(max-width: 1200px) 100vw, 620px"
         />
     </div> 
     <div class="text-center md:text-left mt-8 md:mt-0">

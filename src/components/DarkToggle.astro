@@ -1,0 +1,47 @@
+<mode-toggle class="flex">
+    <button
+      class="justify-self-end bg-black dark:bg-white ml-4 inline-flex h-6 w-11 items-center rounded-full"
+      id="mode-toggle"
+      tabindex="0"
+    >
+      <span class="sr-only">Toggle dark mode</span>
+      <span
+        id="mode-circle"
+        class="light inline-block h-4 w-4 rounded-full bg-gradient-to-tr"
+      ></span>
+    </button>
+  </mode-toggle>
+  
+  <script>
+    // Function to toggle the theme
+    function toggleTheme() {
+      const currentMode = localStorage.getItem("theme") || "light";
+      const nextMode = currentMode === "dark" ? "light" : "dark";
+  
+      localStorage.setItem("theme", nextMode);
+      document.documentElement.classList.toggle("dark", nextMode === "dark");
+    }
+  
+    // Add a click event listener to the mode-toggle button
+    const modeToggle = document.getElementById("mode-toggle");
+    if (modeToggle) {
+      modeToggle.addEventListener("click", toggleTheme);
+    }
+  
+    // Initialize the theme based on the current mode in local storage
+    const currentMode = localStorage.getItem("theme") || "light";
+    document.documentElement.classList.toggle("dark", currentMode === "dark");
+  </script>
+  
+  <style>
+    /* Define the styles for dark and light themes */
+    .dark {
+      background-color: black;
+      color: white;
+    }
+    .light {
+      background-color: white;
+      color: black;
+    }
+  </style>
+  
