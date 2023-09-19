@@ -15,7 +15,7 @@ export const Navbar = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <nav className="w-full h-20 flex flex-col justify-center items-center fixed bg-customDarkBg1 lg:bg-customDarkBgTransparent z-40 lg:backdrop-blur-xl ">
+      <nav className="w-full h-20 flex flex-col justify-center items-center fixed bg-gray-100 lg:bg-gray-100 z-40 lg:backdrop-blur-xl">
         <div className="container mx-auto px-6 lg:px-0 flex justify-between items-center relative">
           <motion.div
             initial={{ opacity: 0 }}
@@ -58,7 +58,7 @@ export const Navbar = () => {
             {/* Your source code link */}
           </motion.div>
           <div
-            className="lg:hidden flex flex-col px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-customDarkBg2 "
+            className="lg:hidden flex flex-col px-1 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-customDarkBg2 "
             onClick={() => setIsOpen(!isOpen)}
           >
             <FontAwesomeIcon icon={faBars} size="2x" />
