@@ -4,66 +4,45 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "MISSION",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "To foster the growth of independent-thinking, innovative, and adaptable professionals who are informed by cutting-edge innovations in research and who are committed to lifelong learning.",
+    icon: "bx:bxs-flag",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "VISION",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "To be the most innovative Young Inventors Club In Sri Lanka.",
+    icon: "bx:bxs-binoculars",
   },
-  {
-    title: "On-Demand Components",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
-  },
-  {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
-  },
+
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
-  </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
-  </p>
-</div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))
-  }
+
+
+<div class="bg-gray-100 py-16">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">About Us</h2>
+    <p class="text-xl text-gray-600 mb-10">
+  The OUSL Young Inventors club is an officially endorsed club by the Sri Lanka Inventors Commission, and is a unique opportunity for students to explore their creativity and showcase their talent in the field of invention. Whether you have a technical background or not, this club is the perfect place to get started. The club is open for all faculties and encourages both men and women within and beyond the technical fields to join.
+
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10">
+      {
+        features.map((item, index) => (
+          <div key={index} class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex items-center justify-center bg-gray-700 rounded-full p-4 w-12 h-12 mx-auto mb-4">
+              <Icon class="text-white" name={item.icon} />
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">{item.title}</h3>
+              <p class="text-gray-600">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </div>
