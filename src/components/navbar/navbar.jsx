@@ -13,7 +13,9 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full h-20 flex flex-col justify-center items-center fixed bg-customDarkBg1 lg:bg-customDarkBgTransparent z-40 lg:backdrop-blur-xl">
+
+    <nav className="w-full h-20 flex flex-col justify-center items-center fixed bg-customDarkBg1 lg:bg-customDarkBgTransparent z-40 lg:backdrop-blur-xl ">
+
       <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
         <motion.div
           initial={{ opacity: 0 }}
@@ -21,14 +23,14 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-        <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-orange-500">YIC</span><span
-            class="text-black-500 font-bold">OUSL</span
-          >
-        </a>
 
-      </div>
+          <div class="flex w-full lg:w-auto justify-start items-start">
+            <a href="/" class="text-lg">
+              <span class="font-bold text-orange-500">YIC</span>
+              <span class="text-black-500 font-bold">OUSL</span>
+            </a>
+          </div>
+
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -36,10 +38,10 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="hidden lg:flex h-full pl-12 pb-2">
+          <div>
             {navbarLinks.map(({ href, label, ariaLabel }) => (
               <a
-                className="navbar-link"
+                className="navbar-link button-link text-black font-bold px-8 py-2 hover:bg-orange-500 hover:text-white rounded-xl "
                 href={href}
                 aria-label={ariaLabel}
                 key={label}
@@ -48,6 +50,8 @@ export const Navbar = () => {
               </a>
             ))}
           </div>
+
+
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -55,17 +59,7 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          {/* <div className="grow basis-0 justify-end hidden lg:flex">
-            <a
-              className="text-black custom-border-gray rounded-xl
-           bg-customDarkBg2 hover:bg-customDarkBg3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-              href="https://github.com/matt765/Tidestream"
-              target="_blank"
-              aria-label="source code"
-            >
-              <span className="pt-px">Source code</span>
-            </a>
-          </div> */}
+          {/* Your source code link */}
         </motion.div>
         <div
           className="lg:hidden flex flex-col  px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-customDarkBg2"
@@ -101,14 +95,7 @@ export const Navbar = () => {
                   {label}
                 </a>
               ))}
-              {/* <a
-                className="text-white custom-border-gray rounded-xl
-           bg-customDarkBg2 hover:bg-customDarkBg3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-                href="https://github.com/matt765/Tidestream"
-                target="_blank"
-              >
-                Source code
-              </a> */}
+            
             </div>
           </motion.div>
         )}
