@@ -58,7 +58,7 @@ export const Navbar = () => {
             {/* Your source code link */}
           </motion.div>
           <div
-            className="lg:hidden flex flex-col px-1 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-customDarkBg2 "
+            className="lg:hidden flex flex-col px-1 py-1 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-customDarkBg2 "
             onClick={() => setIsOpen(!isOpen)}
           >
             <FontAwesomeIcon icon={faBars} size="2x" />
