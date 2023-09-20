@@ -25,8 +25,7 @@ export const Navbar = () => {
           >
             <div className="flex items-center lg:items-start">
               <a href="/" className="flex items-center space-x-2 text-lg">
-                <span className="text-orange-500 font-semibold">YIC</span>
-                <span className="text-black font-semibold">OUSL</span>
+                <div><span className="text-orange-500 font-semibold">YIC</span><span className="text-black font-semibold">OUSL</span></div>
               </a>
             </div>
           </motion.div>
@@ -64,7 +63,8 @@ export const Navbar = () => {
             <FontAwesomeIcon icon={faBars} size="2x" />
             <div className="w-5 h-0.5 bg-black-500 mb-1"></div>
             <div className="w-5 h-0.5 bg-black-500 mb-1"></div>
-            <div className="w-5 h-0.5 bg-black-500 "></div>
+            <div className="w-5 h-0.5 bg-black-500"></div>
+            
           </div>
         </div>
         {/* Mobile navbar */}
@@ -82,7 +82,7 @@ export const Navbar = () => {
                 {navbarLinks.map(({ label, href, ariaLabel }) => (
                   <a
                     key={href}
-                    className="navbar-link text-black font-bold py-2 px-4 lg:px-2 lg:py-1 hover:bg-orange-500 hover:text-white rounded-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-m border-1"
+                    className="navbar-link text-slate-800 font-bold py-2 px-4 lg:px-2 lg:py-1 hover:bg-orange-500 hover:text-white rounded-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-m border-1"
                     href={href}
                     onClick={() => setIsOpen(false)}
                     aria-label={ariaLabel}
