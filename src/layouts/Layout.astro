@@ -2,7 +2,6 @@
 import Footer from "../components/footer.astro";
 import { SEO } from "astro-seo";
 import { Navbar } from "../components/navbar/navbar.jsx";
-import { Event } from "../components/event.astro";
 
 export interface Props {
 	title: string;
@@ -16,7 +15,7 @@ export interface Props {
 
 const { title } = Astro.props;
 
-const makeTitle = title ? + " | " + "YIC OUSL"  : "Think, Learn, Apply, Made";
+const makeTitle = title ? + " | " + "YICOUSL"  : "Think, Learn, Apply, Made";
 
 
 
@@ -49,7 +48,7 @@ const makeTitle = title ? + " | " + "YIC OUSL"  : "Think, Learn, Apply, Made";
 		  },
 		}}
 	  /> -->
-	  <title>"YIC"</title>
+	  <title>YIC</title>
 	</head>
 	<body>
 		<Navbar client:load />

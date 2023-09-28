@@ -4,10 +4,10 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navbarLinks = [
-  { label: "Home", href: "#home", ariaLabel: "Home" },
-  { label: "Blog", href: "#blog", ariaLabel: "Blog" },
-  { label: "News", href: "#news", ariaLabel: "News" },
-  { label: "Contact Us", href: "#feedback", ariaLabel: "Feedback" },
+  { label: "Home", href: "/", ariaLabel: "Home" },
+  { label: "Blog", href: "/blog", ariaLabel: "Blog" },
+  { label: "News", href: "/news", ariaLabel: "News" },
+  { label: "Contact Us", href: "/contact", ariaLabel: "Feedback" },
 ];
 
 export const Navbar = () => {

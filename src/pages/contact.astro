@@ -1,0 +1,39 @@
+---
+import Contactform from "../components/contactform.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro"
+import Layout from "../layouts/Layout.astro"
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contact Our Team</Fragment>
+      <Fragment slot="desc">Discuss your great innovative idea with us and we have made it to real.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>PO Box 21, The Open University of Sri Lanka, Nawala, Nugegoda.</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:yicousl@ousl.lk"
+              >yicousl@ousl.lk</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              href="tel:+94 11 288 1000">+94 11 288 1000</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>
